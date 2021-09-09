@@ -1,0 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap');
+
+
+.bar{
+    background-color: black;
+    height: 100px;
+}
+
+.blackSect{
+    background-color: white;
+    height: 150px;
+    margin-bottom: 10%;
+    
+}
+
+.logo{
+    width: 200px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.nav{
+    display: flex;
+    align-content: flex-end;
+}
