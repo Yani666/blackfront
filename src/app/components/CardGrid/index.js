@@ -22,8 +22,8 @@ function CardGrid (props){
     },[])
       console.log(cards)
     return(
-<Grid templateColumns="repeat(5, 1fr)" gap={6}>
-  {cards.map((item, index)=> <Cards key={index} {...item} w="100%" h="10" bg="blue.500" />)}
+<Grid templateColumns="repeat(3, 1fr)" gap={6}>
+  {cards.map((item, index)=> <Cards addToCar={()=>props.addToCar(item)} key={index} {...item} w="100%" h="10" bg="blue.500" />)}
   
 </Grid>
 )

@@ -4,6 +4,7 @@ import { Box, useBreakpointValue } from '@chakra-ui/react'
 import Header from '../Header'
 import Sidebar from '../SidebarData'
 
+
 const smVariant = { navigation: 'drawer', navigationButton: true }
 const mdVariant = { navigation: 'sidebar', navigationButton: false }
 

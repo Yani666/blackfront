@@ -8,8 +8,11 @@ import {
   Avatar,
   useColorModeValue,
 } from '@chakra-ui/react';
+import moment from 'moment';
 
-export default function SuggestionCard() {
+export default function SuggestionCard({email, suggestion, createdAt }) {
+
+  
   return (
     <Center py={6}>
       <Box
@@ -22,31 +25,21 @@ export default function SuggestionCard() {
         overflow={'hidden'}>
        
         <Stack>
-          <Text
-            color={'green.500'}
-            textTransform={'uppercase'}
-            fontWeight={800}
-            fontSize={'sm'}
-            letterSpacing={1.1}>
-            Blog
-          </Text>
+          
           <Heading
             color={useColorModeValue('gray.700', 'white')}
             fontSize={'2xl'}
             fontFamily={'body'}>
-            Boost your conversion rate
+           Sugerencia:
           </Heading>
           <Text color={'gray.500'}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum.
+            {suggestion}
           </Text>
         </Stack>
         <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
           <Stack direction={'column'} spacing={0} fontSize={'l'}>
-            <Text color={'gray.500'}>Achim Rolle</Text>
-            <Text color={'gray.500'}>Feb 08, 2021 · 6min read</Text>
+            <Text color={'gray.500'}>{email}</Text>
+            <Text color={'gray.500'}>{moment(createdAt).format("DD/MM/YYYY - HH:mm" )}</Text>
           </Stack>
         </Stack>
       </Box>

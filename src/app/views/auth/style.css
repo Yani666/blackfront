@@ -1,7 +1,11 @@
 .form {
 background-image: url('../../assets/images/bloodbackground.jpeg');
 background-repeat: no-repeat;
-
+height: 100vh;
+background-size: cover;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .font {
