@@ -14,6 +14,7 @@ import {
   MenuList,
   MenuItem
 } from '@chakra-ui/react'
+import {Link} from "react-router-dom"
 
 
 
@@ -25,31 +26,22 @@ const SidebarContent = ({ onClick }) => (
      
           
     
-    <Button onClick={onClick} w="100%">
+    <Link to="/"><Button onClick={onClick} w="100%">
       Home
-    </Button>
-    <Menu>
-   <MenuButton  rightIcon={<ChevronDownIcon />}>  {/*as={Button}*/}
-    Coleccion
-  </MenuButton>
-  <MenuList>
-    <MenuItem>Ropa</MenuItem>
-    <MenuItem>Zapatos</MenuItem>
-    <MenuItem>Accesorios</MenuItem>
-    </MenuList>
-    </Menu>
-    <Button onClick={onClick} w="100%">
-      Mi cuenta
-    </Button>
-    <Button onClick={onClick} w="100%">
+    </Button></Link>
+
+    <Link to="/store/dashboard"><Button onClick={onClick} w="100%">
+      Coleccion
+      </Button></Link>
+      <Link to="/store/carrito"><Button onClick={onClick} w="100%">
       Carrito
-    </Button>
-    <Button onClick={onClick} w="100%">
-      Editar productos
-    </Button>
-    <Button onClick={onClick} w="100%">
+    </Button></Link>
+    <Link to="/store/uploadprod"><Button onClick={onClick} w="100%">
+      Prouctos Admin
+    </Button></Link>
+    <Link to ="/store/suggestions"><Button onClick={onClick} w="100%">
       Sugerencias
-    </Button>
+    </Button></Link>
   </VStack>
   </>
 )

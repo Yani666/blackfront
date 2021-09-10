@@ -5,6 +5,6 @@ export const createSuggestion =(data) =>{
 }
 
 export const getAllSugestion = () =>{
-    return _api.get("/suggestion/allsugestions")
+    return _api.get("/suggestion/allsuggestions")
 }
 

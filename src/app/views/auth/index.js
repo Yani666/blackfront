@@ -39,9 +39,9 @@ function Auth ({match, history, location,...restProps}){
 
 
 return (
-    <div className="init" >
-    <Row className='form' gutter={[16,16]} >
-    <Col sm={24} md={12}  >
+    <div className="init form"  >
+    <Row gutter={[16,16]} >
+    <Col sm={24} md={20}  >
     <Title className='font'> {match.path === '/signup' ? 'Signup' : 'Login'} </Title>
     <Form onFinish={handleSubmit}
       name="basic"

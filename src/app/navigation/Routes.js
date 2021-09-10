@@ -1,5 +1,5 @@
 import {Switch,Route} from "react-router-dom";
-import {Auth, Dashboard, Home, SidebarWithHeader} from "../views";
+import {Car, Dashboard, Suggestion} from "../views";
 import {Layout, SuggestionCard, Uproducts} from '../components'
 
 
@@ -10,7 +10,8 @@ const Router = () => (
        
         <Route path="/store/dashboard" component={Dashboard}/>
         <Route path="/store/uploadprod" component={Uproducts}/>
-        <Route path="/store/suggestions" component={SuggestionCard}/>
+        <Route path="/store/suggestions" component={Suggestion}/>
+        <Route path="/store/carrito" component={Car}/>
         
         
     </Switch>
