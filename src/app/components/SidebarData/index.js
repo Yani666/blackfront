@@ -33,6 +33,9 @@ const SidebarContent = ({ onClick }) => (
     <Link to="/store/dashboard"><Button onClick={onClick} w="100%">
       Coleccion
       </Button></Link>
+      <Link to="/store/profile"><Button onClick={onClick} w="100%">
+      Mi perfil de compras
+      </Button></Link>
       <Link to="/store/carrito"><Button onClick={onClick} w="100%">
       Carrito
     </Button></Link>
