@@ -10,6 +10,8 @@ import {
     useColorModeValue,
     Image
   } from '@chakra-ui/react';
+  import Paypal from '../paypal/index'
+ 
 
 
 export default function CarView() {
@@ -21,9 +23,12 @@ export default function CarView() {
        setCar(JSON.parse(data))
     },[])
     console.log(car)
-      
+
 
     return (
+
+      <div style={{display:"flex",
+      flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
         <Center py={6}>
         <Box
           maxW={'445px'}
@@ -56,8 +61,14 @@ export default function CarView() {
             </Stack>
             <Image src={item.img[0]} boxSize="100px"/>
           </Stack>): ""}
-
+          <Text color={'gray.500'}>Total a pagar:{car.price}</Text>
         </Box>
       </Center>
+      
+           <Paypal price={car.price}
+           cart={car}/>
+   
+      </div>
+     
     )
 }

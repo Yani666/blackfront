@@ -6,4 +6,5 @@ export {default as CardGrid} from './CardGrid';
 export {default as Uproducts} from './Uproducts';
 export {default as SuggestionCard} from './SuggestionCard';
 export {default as TableComponent} from './Table'
+export {default as Profile} from './Profile'
 

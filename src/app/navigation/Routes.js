@@ -1,6 +1,7 @@
 import {Switch,Route} from "react-router-dom";
 import {Car, Dashboard, Suggestion} from "../views";
-import {Layout, SuggestionCard, Uproducts} from '../components'
+import {Layout, Profile, SuggestionCard, Uproducts} from '../components'
+
 
 
 const Router = () => (
@@ -12,6 +13,8 @@ const Router = () => (
         <Route path="/store/uploadprod" component={Uproducts}/>
         <Route path="/store/suggestions" component={Suggestion}/>
         <Route path="/store/carrito" component={Car}/>
+        <Route path="/store/profile" component={Profile}/>
+        
         
         
     </Switch>
