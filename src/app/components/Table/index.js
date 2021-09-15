@@ -19,8 +19,26 @@ import {
     </Tr>
   
   )
-  const Row = ({products, deleteProduct, editProduct}) =>(
+  const Row = ({type, products, deleteProduct, editProduct}) =>(
+  type === "order" ?
     products.map((product,index)=>
+    <Tr key={index}>
+
+        <Td>
+          {product._products.map((order, index)=>
+          <div style={{display:"flex", flexDirection: "column"}} key={index}>
+            <span>nombre: {order.title}</span>
+            <span>descripcion: {order.description}</span>
+            <span>cantidad: {order.cant}</span>
+          </div>)}
+        </Td>
+        <Td>{product.price}</Td>
+        <Td> 
+    </Td>
+    </Tr>
+  )
+  :
+   products.map((product,index)=>
     <Tr key={index}>
 
         <Td>{product.title}</Td>
@@ -28,18 +46,19 @@ import {
         <Td>{product.description}</Td>
         <Td>{product.price}</Td>
         <Td> 
-        <Button colorScheme="teal" size="xs" onClick={()=> editProduct(product, index)}>
+        {editProduct && <Button colorScheme="teal" size="xs" onClick={()=> editProduct(product, index)}>
             Editar
-        </Button>
-        <Button colorScheme="teal" size="xs" onClick={()=> deleteProduct(product._id)}>
+        </Button>}
+        {deleteProduct && <Button colorScheme="teal" size="xs" onClick={()=> deleteProduct(product._id)}>
             Borrar
-        </Button>
+        </Button>}
         </Td>
+    </Tr>
+  )
 
-   
-  </Tr>
-  ))
-  const TableComponent = ({ onClick, products, titles,editProduct, deleteProduct }) => (
+  )
+
+  const TableComponent = ({ type, products, titles,editProduct, deleteProduct }) => (
 
     <Table variant="striped" colorScheme="teal">
   <Thead>
@@ -47,10 +66,11 @@ import {
  </Thead>
   
   <Tbody>
-    <Row 
+     <Row 
+     type={type}
     products={products} 
     editProduct={editProduct} 
-    deleteProduct={deleteProduct} />
+    deleteProduct={deleteProduct} /> 
     
     
   </Tbody>

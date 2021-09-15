@@ -1,5 +1,7 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Box, useBreakpointValue } from '@chakra-ui/react'
+import {Ctx} from '../../hooks/context'
+
 
 import Header from '../Header'
 import Sidebar from '../SidebarData'
@@ -11,12 +13,13 @@ const mdVariant = { navigation: 'sidebar', navigationButton: false }
 export default function Layout({children}) {
   const [isSidebarOpen, setSidebarOpen] = useState(false)
   const variants = useBreakpointValue({ base: smVariant, md: mdVariant })
-
+  const {user} = useContext(Ctx)
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen)
-
+   console.log("soy el user",user)
   return (
     <>
       <Sidebar
+        user={user}
         variant={variants?.navigation}
         isOpen={isSidebarOpen}
         onClose={toggleSidebar}

@@ -15,12 +15,17 @@ import {
   MenuItem
 } from '@chakra-ui/react'
 import {Link} from "react-router-dom"
+import React, {useContext} from 'react';
 
 
 
-const SidebarContent = ({ onClick }) => (
+const SidebarContent = ({ onClick, user }) => {
+  
+
+
+  
+return(
 <>
-  Black Studio  
   <VStack>
 
      
@@ -39,17 +44,17 @@ const SidebarContent = ({ onClick }) => (
       <Link to="/store/carrito"><Button onClick={onClick} w="100%">
       Carrito
     </Button></Link>
-    <Link to="/store/uploadprod"><Button onClick={onClick} w="100%">
-      Prouctos Admin
-    </Button></Link>
-    <Link to ="/store/suggestions"><Button onClick={onClick} w="100%">
+    {user.role != undefined && user.role==="ADMIN" ? <Link to="/store/uploadprod"><Button onClick={onClick} w="100%">
+      Productos Admin
+    </Button></Link>: ""}
+    {user.role != undefined && user.role==="ADMIN" ? <Link to ="/store/suggestions"><Button onClick={onClick} w="100%">
       Sugerencias
-    </Button></Link>
+    </Button></Link> : "" }
   </VStack>
   </>
-)
+)}
 
-const Sidebar = ({ isOpen, variant, onClose }) => {
+const Sidebar = ({ isOpen, variant, onClose, user }) => {
   return variant === 'sidebar' ? (
     <Box
       position="fixed"
@@ -58,18 +63,18 @@ const Sidebar = ({ isOpen, variant, onClose }) => {
       w="200px"
       top={0}
       h="100%"
-      bg="#C53030"
+      bg="black"
     >
-      <SidebarContent onClick={onClose} />
+      <SidebarContent onClick={onClose} user={user}/>
     </Box>
   ) : (
     <Drawer isOpen={isOpen} placement="left" onClose={onClose} >
       <DrawerOverlay >
-        <DrawerContent bg="#C53030">
+        <DrawerContent bg="black">
           <DrawerCloseButton />
           <DrawerHeader>Black Studio</DrawerHeader>
           <DrawerBody>
-            <SidebarContent onClick={onClose} />
+            <SidebarContent onClick={onClose} user={user}/>
           </DrawerBody>
         </DrawerContent>
       </DrawerOverlay>
