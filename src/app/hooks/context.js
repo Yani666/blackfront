@@ -7,9 +7,17 @@ export const Ctx = createContext()
 
     const  [user,setUser] = useState(null)
     
-    const login = (user) => setUser(user)
+    const login = (user) => {
+        setUser(user)
+        localStorage.setItem("USER", JSON.stringify(user))
+    }
 
-    const logout = () => (setUser (null), logoutWS())
+
+    const logout = () => {
+        setUser(null)
+        logoutWS()
+        localStorage.removeItem("USER")
+    }
 
     useEffect(()=>{
         async function checkSession(){
