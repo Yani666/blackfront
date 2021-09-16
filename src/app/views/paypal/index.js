@@ -7,13 +7,15 @@ import {createOrder} from '../../services/order-ws.js'
 
 // const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
-function Paypal({price, cart}){
+function Paypal({price, cart, history}){
   
   
 
     const onSuccess = async  (payment) =>{
       try{
            const {data}=await createOrder(cart)
+           localStorage.removeItem("carrito")
+           history.push("/store/profile")
       }catch(error){
            console.log(error)
       }

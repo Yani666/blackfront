@@ -14,7 +14,7 @@ import {
  
 
 
-export default function CarView() {
+export default function CarView({history}) {
 
     const[car,setCar] = useState({})
 
@@ -64,7 +64,9 @@ export default function CarView() {
         </Box>
       </Center>
       
-           <Paypal price={car.price}
+           <Paypal 
+           history={history}
+           price={car.price}
            cart={car}/>
    
       </div>
