@@ -17,13 +17,13 @@ const {Title} = Typography
 function Auth ({match, history, location,...restProps}){
     const {login} = useContext(Ctx)
     const handleSubmit = async (user) => {
-        console.log(user, match)
+        
         try{
             const connect = match.path === "/signup" ? signupWS : loginWS
             const {data} = await connect (user)
             history.push('/store/dashboard')
             if (match.path ==='/login'){
-              console.log(data.result)
+              
                 login(data.result)
             }
         }catch (error){

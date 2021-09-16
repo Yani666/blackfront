@@ -17,7 +17,6 @@ function Profile (){
   const getData = async() =>{
     try{
       const{data}=await getMyOrder()
-      console.log(data)
       setOrders(data.orders)
 
     }catch(error){

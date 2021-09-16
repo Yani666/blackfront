@@ -22,7 +22,6 @@ export default function CarView() {
       const data=localStorage.getItem("carrito")
        setCar(JSON.parse(data))
     },[])
-    console.log(car)
 
 
     return (

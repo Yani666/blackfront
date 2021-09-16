@@ -15,7 +15,6 @@ export default function Layout({children}) {
   const variants = useBreakpointValue({ base: smVariant, md: mdVariant })
   const {user} = useContext(Ctx)
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen)
-   console.log("soy el user",user)
   return (
     <>
       <Sidebar

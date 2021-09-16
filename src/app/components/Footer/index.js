@@ -28,7 +28,6 @@ export default function Footer() {
     e.preventDefault()
     try {
       const {data} = await createSuggestion (info)
-      console.log(data)
 
     }catch (error){
      console.log(error)

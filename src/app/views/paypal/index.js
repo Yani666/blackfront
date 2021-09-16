@@ -14,11 +14,9 @@ function Paypal({price, cart}){
     const onSuccess = async  (payment) =>{
       try{
            const {data}=await createOrder(cart)
-           console.log(data)
       }catch(error){
            console.log(error)
       }
-      console.log("soy onsuccess",payment)
     }
 
     const onError = (error) =>{

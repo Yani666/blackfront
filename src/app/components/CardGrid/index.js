@@ -10,7 +10,6 @@ function CardGrid (props){
     const getData = async() =>{
         try{
             const{data}=await getProducts()
-            console.log(data)
             setCards(data.products)
         }catch(error){
             console.log(error)
@@ -20,7 +19,6 @@ function CardGrid (props){
     useEffect(()=>{
         getData()
     },[])
-      console.log(cards)
     return(
 <Grid templateColumns="repeat(3, 1fr)" gap={6}>
   {cards.map((item, index)=> <Cards addToCar={()=>props.addToCar(item)} key={index} {...item} w="100%" h="10" bg="blue.500" />)}

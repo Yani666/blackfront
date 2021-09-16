@@ -50,7 +50,6 @@ const CFaLock = chakra(FaLock);
              }
              const submitEvent = ()=>isEdit ? updateProducts(_datos._id,formData) : createProducts(formData)
              const {data} = await submitEvent()
-             console.log("holi data",data)
              if(isEdit){
                  const index = prod.findIndex(item=>item._id===data.products._id)
                  const newProd =[...prod]
@@ -71,7 +70,6 @@ const CFaLock = chakra(FaLock);
      }
 
      const editProduct = (product,index_product)=>{
-       console.log(product)
        setProductos(product)
        setIsEdit(true)
      }
@@ -81,11 +79,9 @@ const CFaLock = chakra(FaLock);
          const {data} = await deleteProducts(id) 
          const newProd = [...prod]
          setProd(newProd.filter(item=>item._id!=id))
-         console.log("holi data delete",data)
        }catch(error){
         console.log("no se elimino", error.response)
        }
-       console.log(id)
 
 
      }
@@ -94,19 +90,16 @@ const CFaLock = chakra(FaLock);
     e.preventDefault()
 
       setDocs(e.target.files )
-      console.log(e.target.files) 
   
 }
   const handleChange = (e) =>{
       setProductos({...productos,[e.target.name]:e.target.value})
-      console.log(e.target.name)
   }
 
   
     const getData = async() =>{
         try{
             const{data}=await getProducts()
-            console.log(data)
             setProd(data.products)
         }catch(error){
             console.log(error)
@@ -116,7 +109,6 @@ const CFaLock = chakra(FaLock);
     useEffect(()=>{
         getData()
     },[])
-      console.log(prod)
 
 
  

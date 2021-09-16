@@ -12,7 +12,6 @@ function Suggestion (){
   const getData = async() =>{
     try{
         const{data}=await getAllSugestion()
-        console.log(data)
         setSuggestions(data.suggestions)
     }catch(error){
         console.log(error)
@@ -22,8 +21,6 @@ function Suggestion (){
 useEffect(()=>{
     getData()
 },[])
-  console.log(suggestions)
-
 
     return(
 

@@ -41,12 +41,6 @@ function Dashboard(){
 
     }
 
-   
-    
-    
-      
-    console.log("hay cosas en el carrito", car)
-
     return (
         <div>
         <CardGrid
