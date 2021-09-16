@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+<br />
+<p align="center">
+  <a href="https://github.com/Yani666">
+    <img src="./public/logo.png" alt="Logo" width="500" height="500">
+  </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h1 align="center">Black Studio </h1>
 
-## Available Scripts
+  ## Developer:
 
-In the project directory, you can run:
+Yanet Padilla
 
-### `yarn start`
+# Bienvenido a Black Studio
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Tu tienda en linea donde encontraras el mejor estilo de ropa, zapatos y accesorios con el estilo unico y gotico.
 
-### `yarn test`
+Tambien queremos asegurarnos que tengas una gran experiencia, por esto hemos creado un buzon donde podras contatanos y escribirnos para saber que es lo que buscas y ayudarte a encontrarlo, contamos con pagos seguros en linea 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demo
 
-### `yarn build`
+[Black Studio](https://blackstudio.netlify.app)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Credenciales para admin
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Username: Yanet
+- Password: 666
 
-### `yarn eject`
+## Tecnologias y librerias 
+-NodeJS.\
+-Express.\
+-MongoDB.\
+-JavaScript.\
+-Paypal.\
+-HTML.\
+-CSS.\
+-Chakra UI.\
+-Cloudinary.\
+-Passport.\
+-Antd.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Paginas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Home
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-Login/Signup.\
+-Dashboard.\
+-Store.\
+-UploadProduct.\
+-Sugerencias.\
+-Carrito de compras.\
+-Perfil
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Componentes
+-Cards.\
+-Footer.\
+-Checkout.\
+-Header.\
+-Navbar.\
+-SideBar.\
+-RedesSociales.\
+-Sugerencias.\
+-Perfil
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+# Descarga y prueba
+Frontend:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```sh
+https://github.com/Yani666/blackfront
+cd blackfront
+yarn
+yarn start
+```
 
-### Analyzing the Bundle Size
+Backend:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```sh
+git clone https://github.com/Yani666/blackBack
 
-### Making a Progressive Web App
+cd blackBack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm install
 
-### Advanced Configuration
+npm run dev
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## .env file
+```sh
+PORT = localport 
+DB = mongodb://localhost/blackStudio
+SECRET = Secret word
+CLOUDINARY_NAME = Your cloudinary username
+CLOUDINARY_KEY = Your coudinary apikey
+CLOUDINARY_SECRET = Your cloudinary secret code
+```
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
