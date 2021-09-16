@@ -5,7 +5,7 @@ export const Ctx = createContext()
  const AppCtx = (props) =>{
 
 
-    const  [user,setUser] = useState(null)
+    const  [user,setUser] = useState({role:"USER"})
     
     const login = (user) => {
         setUser(user)
@@ -14,7 +14,7 @@ export const Ctx = createContext()
 
 
     const logout = () => {
-        setUser(null)
+        setUser({role:"USER"})
         logoutWS()
         localStorage.removeItem("USER")
     }
@@ -27,7 +27,7 @@ export const Ctx = createContext()
                     setUser(myUser)
                 }else{
                 const {data} = await getUser()
-                setUser(data.result._id ? data.result : null)
+                setUser(data.result._id ? data.result : {role:"USER"})
                 if(data.result._id){
                     localStorage.setItem("USER", JSON.stringify(data.result))
                 }
@@ -35,7 +35,7 @@ export const Ctx = createContext()
                 
             }catch(error){
                 console.log("error context", error)
-                setUser(null)
+                setUser({role:"USER"})
 
             }
         }

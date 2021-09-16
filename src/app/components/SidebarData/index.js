@@ -54,7 +54,7 @@ return(
   </>
 )}
 
-const Sidebar = ({ isOpen, variant, onClose, user={role:"USER"} }) => {
+const Sidebar = ({ isOpen, variant, onClose, user }) => {
   return variant === 'sidebar' ? (
     <Box
       position="fixed"
