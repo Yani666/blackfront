@@ -14,9 +14,17 @@ export const Ctx = createContext()
     useEffect(()=>{
         async function checkSession(){
             try{
+                const myUser = JSON.parse(localStorage.getItem("USER"))
+                if(myUser){
+                    setUser(myUser)
+                }else{
                 const {data} = await getUser()
-                
                 setUser(data.result._id ? data.result : null)
+                if(data.result._id){
+                    localStorage.setItem("USER", JSON.stringify(data.result))
+                }
+                }
+                
             }catch(error){
                 console.log("error context", error)
                 setUser(null)
