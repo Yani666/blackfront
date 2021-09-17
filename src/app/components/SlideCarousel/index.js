@@ -1,5 +1,8 @@
 import { Carousel } from 'antd';
-import image1 from  '../../assets/images/bloodbackground.jpeg'
+import image1 from  '../../assets/images/autfit1.jpeg'
+import image2 from  '../../assets/images/autfit2.jpeg'
+import image3 from  '../../assets/images/autfit3.jpeg'
+import image4 from  '../../assets/images/botas.jpeg'
 const contentStyle = {
   height: '560px',
   color: '#fff',
@@ -17,11 +20,11 @@ return(
       <img src={image1} style={contentStyle}></img>
     </div>
     <div>
-    <img src={image1} style={contentStyle}></img>    </div>
+    <img src={image2} style={contentStyle}></img>    </div>
     <div>
-    <img src={image1} style={contentStyle}></img>    </div>
+    <img src={image3} style={contentStyle}></img>    </div>
     <div>
-    <img src={image1} style={contentStyle}></img>    </div>
+    <img src={image4} style={contentStyle}></img>    </div>
   </Carousel>
     )
 }

@@ -18,6 +18,8 @@ import {
 } from '@chakra-ui/react';
 import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter } from 'react-icons/io'
 import {HomeNavBar, SlideCarousel} from '../../components';
+import vampire from  '../../assets/images/blackStudioGirl.png'
+
 export default function Home() {
   return (
     <div>
@@ -91,7 +93,7 @@ export default function Home() {
           w={'full'}>
           <Box
             position={'relative'}
-            height={'300px'}
+            height={'full'}
             rounded={'2xl'}
             boxShadow={'2xl'}
             width={'full'}
@@ -102,9 +104,7 @@ export default function Home() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src={
-                'https://cdn.eldeforma.com/wp-content/uploads/2019/09/dark-clothes.jpg'
-              }
+              src={vampire}
             />
           </Box>
         </Flex>
