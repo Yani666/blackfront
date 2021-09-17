@@ -26,6 +26,7 @@ function Auth ({match, history, location,...restProps}){
               
                 login(data.result)
             }
+            localStorage.setItem("USER",JSON.stringify(data.result))
         }catch (error){
             console.log("error al crear user", error.response)
         }
